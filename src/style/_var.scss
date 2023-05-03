@@ -1,3 +1,53 @@
 $back: #ffaa05;
 $main: #000000;
 $second: #ffffff;
+
+@mixin sm {
+    @media (min-width: 540px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+// body {
+//     font-size: 1rem;
+
+//     @include phone {
+//         font-size: 2rem;
+//     }
+
+//     @include tablet {
+//         font-size: 3rem;
+//     }
+
+//     @include desktop {
+//         font-size: 4rem;
+//     }
+
+//     @include big-desktop {
+//         font-size: 5rem;
+//     }
+// }
