@@ -31,23 +31,3 @@ $second: #ffffff;
         @content;
     }
 }
-
-// body {
-//     font-size: 1rem;
-
-//     @include phone {
-//         font-size: 2rem;
-//     }
-
-//     @include tablet {
-//         font-size: 3rem;
-//     }
-
-//     @include desktop {
-//         font-size: 4rem;
-//     }
-
-//     @include big-desktop {
-//         font-size: 5rem;
-//     }
-// }
