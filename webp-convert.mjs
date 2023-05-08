@@ -1,8 +1,8 @@
 import imagemin from "imagemin";
 import imageminWebp from "imagemin-webp";
 
-await imagemin(["src/img/*.{jpg,png}"], {
-    destination: "src/img",
+await imagemin(["src/img/carrer_img/*.{jpg,png}"], {
+    destination: "src/img/carrer_img",
     plugins: [imageminWebp({ quality: 70 })],
 });
 
