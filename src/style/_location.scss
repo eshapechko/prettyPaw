@@ -1,6 +1,8 @@
 .location {
+    position: relative;
     &__list {
         position: relative;
+        z-index: 10;
         @include lg {
             display: flex;
             min-height: 552px;
@@ -68,6 +70,10 @@
             inset: 0;
             background-size: cover;
             background-position: center;
+
+            @include lg {
+                background-image: none;
+            }
         }
 
         &_mammals::before {
@@ -88,10 +94,6 @@
                     url("../img/location/mammals_tablet.webp") 1x,
                     url("../img/location/mammals_tablet.jpg") 1x
                 );
-            }
-
-            @include lg {
-                background-image: none;
             }
         }
 
@@ -114,10 +116,6 @@
                     url("../img/location/birds_tablet.jpg") 1x
                 );
             }
-
-            @include lg {
-                background-image: none;
-            }
         }
 
         &_reptiles::before {
@@ -138,10 +136,6 @@
                     url("../img/location/reptiles_tablet.webp") 1x,
                     url("../img/location/reptiles_tablet.jpg") 1x
                 );
-            }
-
-            @include lg {
-                background-image: none;
             }
         }
 
@@ -164,10 +158,6 @@
                     url("../img/location/water_tablet.jpg") 1x
                 );
             }
-
-            @include lg {
-                background-image: none;
-            }
         }
 
         &_insects::before {
@@ -187,10 +177,6 @@
                     url("../img/location/insects_tablet.webp") 1x,
                     url("../img/location/insects_tablet.jpg") 1x
                 );
-            }
-
-            @include lg {
-                background-image: none;
             }
         }
     }
@@ -228,9 +214,9 @@
     }
 
     &__video-bg {
-        z-index: -3;
+        display: none;
         @include lg {
-            z-index: -1;
+            display: block;
         }
     }
 }
