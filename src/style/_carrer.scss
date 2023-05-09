@@ -66,29 +66,42 @@
     }
 
     &__slider {
-        overflow: visible;
+        @include lg {
+            overflow: visible;
+        }
     }
 
     &__image-item {
         display: flex;
         align-items: center;
         height: initial;
+
+        @include sm {
+            &_odd {
+                width: 56%;
+            }
+
+            &_even {
+                width: 40%;
+            }
+        }
+
         @include md {
-            &:nth-child(odd) {
+            &_odd {
                 width: 34%;
             }
 
-            &:nth-child(even) {
+            &_even {
                 width: 25%;
             }
         }
 
         @include xl {
-            &:nth-child(odd) {
+            &_odd {
                 width: 27%;
             }
 
-            &:nth-child(even) {
+            &_even {
                 width: 20%;
             }
         }

@@ -120,7 +120,8 @@ iframe {
 .link-main {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 18px;
+    border: 2px solid $second;
     gap: 4px;
     font-weight: 1000;
     font-size: 16px;
@@ -129,12 +130,29 @@ iframe {
     background-color: $second;
     border-radius: 80px;
 
+    &:hover {
+        transition: 0.5s;
+        color: $main;
+    }
+
+    &:focus,
+    &:active {
+        border: 2px solid $main;
+        transition: none;
+        outline: none;
+    }
+
     &:after {
         content: "";
         display: block;
         width: 16px;
         height: 16px;
         background: url("../img/carrer_img/arrow-right.svg") center/contain no-repeat;
+    }
+
+    &:hover::after {
+        transition: 0.5s;
+        background-image: url("../img/black-arrow.svg");
     }
 
     @include lg {
