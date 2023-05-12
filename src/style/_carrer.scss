@@ -77,13 +77,7 @@
         height: initial;
 
         @include sm {
-            &_odd {
-                width: 56%;
-            }
-
-            &_even {
-                width: 40%;
-            }
+            width: 48%;
         }
 
         @include md {
