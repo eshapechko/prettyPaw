@@ -36,12 +36,9 @@ export const menuControl = () => {
     };
 
     const closeMenu = () => {
+        navigationButton.classList.remove("navigation__button_active");
         tl.reverse();
     };
-
-    tl.eventCallback("onReverseComplete", () => {
-        navigationButton.classList.remove("navigation__button_active");
-    });
 
     navigationButton.addEventListener("click", () => {
         if (navigationButton.classList.contains("navigation__button_active")) {
