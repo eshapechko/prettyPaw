@@ -24,12 +24,6 @@ export const menuControl = () => {
         tl.from(elem, { opacity: 0, x, duration: 1 }, "-=1");
     });
 
-    navigationItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            closeMenu();
-        });
-    });
-
     const openMenu = () => {
         navigationButton.classList.add("navigation__button_active");
         tl.play();
@@ -72,4 +66,10 @@ export const menuControl = () => {
 
     mediaQuery.addEventListener("change", checkScreenSize);
     checkScreenSize(mediaQuery);
+
+    navigationList.addEventListener("click", ({ target }) => {
+        if (target.closest(".navigation__link") && !mediaQuery.matches) {
+            closeMenu();
+        }
+    });
 };
