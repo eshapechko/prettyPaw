@@ -24,6 +24,12 @@ export const menuControl = () => {
         tl.from(elem, { opacity: 0, x, duration: 1 }, "-=1");
     });
 
+    navigationItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            closeMenu();
+        });
+    });
+
     const openMenu = () => {
         navigationButton.classList.add("navigation__button_active");
         tl.play();
@@ -65,7 +71,7 @@ export const menuControl = () => {
         }
     };
 
-    const mediaQuery = window.matchMedia("(min-width: 1280px)");
+    const mediaQuery = window.matchMedia("(min-width: 1240px)");
 
     mediaQuery.addEventListener("change", checkScreenSize);
     checkScreenSize(mediaQuery);
