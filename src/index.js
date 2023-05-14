@@ -8,11 +8,15 @@ import { slidersInit } from "./modules/sliders";
 import { videoBackgroundInit } from "./modules/videobackground";
 import { menuControl } from "./modules/menuControl";
 import { locationHover } from "./modules/locationHover";
+import { initScrollButton } from "./modules/scrollTopButton";
+import { pageControlInit } from "./modules/pageControl";
 
 // use modules
 videoBackgroundInit();
 menuControl();
 locationHover();
+initScrollButton("arrow-top");
+pageControlInit();
 
 const carrerImageItems = document.querySelectorAll(".carrer__image-item");
 carrerImageItems.forEach((item, i) => {
@@ -22,35 +26,37 @@ carrerImageItems.forEach((item, i) => {
 slidersInit(".about__slider", {
     pagination: {
         el: ".about__slider-pagination",
+        enabled: true,
     },
 });
 
 slidersInit(".carrer__slider", {
     pagination: {
         el: ".carrer__slider-pagination",
+        enabled: true,
     },
     breakpoints: {
         576: {
             slidesPerView: "auto",
             spaceBetween: 20,
-            pagination: { type: "bullets" },
+            pagination: { enabled: false },
         },
         768: {
             slidesPerView: "auto",
             spaceBetween: 20,
-            pagination: { type: "" },
+            pagination: { enabled: false },
         },
 
         1024: {
             slidesPerView: "auto",
             spaceBetween: 26,
-            pagination: false,
+            pagination: { enabled: false },
         },
 
         1240: {
             slidesPerView: "auto",
             spaceBetween: 30,
-            pagination: false,
+            pagination: { enabled: false },
         },
     },
 });
